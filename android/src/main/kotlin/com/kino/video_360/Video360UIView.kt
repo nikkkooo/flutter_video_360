@@ -1,5 +1,6 @@
 package com.kino.video_360
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.net.Uri
 import android.os.Build
@@ -72,6 +73,7 @@ class Video360UIView : FrameLayout, Player.Listener {
                 .build()
     }
 
+    @SuppressLint("SuspiciousIndentation")
     private fun buildDataSourceFactory(context: Context, cookieValue: String): DataSource.Factory {
         val defaultHttpFactory = DefaultHttpDataSource.Factory()
                 defaultHttpFactory.setUserAgent(Util.getUserAgent(context, "kino_video_360"))
